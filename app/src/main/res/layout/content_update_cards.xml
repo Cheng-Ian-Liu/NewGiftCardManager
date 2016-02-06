@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cjl.newgiftcardmanager.UpdateCardsActivity"
+    tools:showIn="@layout/activity_update_cards">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Look Up Current Card ID"
+        android:id="@+id/button_LookupCards"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText_inputID"
+        android:layout_below="@+id/textView28"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/button_SubmitUpdates"
+        android:layout_alignEnd="@+id/button_SubmitUpdates" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_companyUpdate"
+        android:layout_below="@+id/textView20"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView22"
+        android:layout_toEndOf="@+id/textView22" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_numberUpdate"
+        android:layout_below="@+id/editText_companyUpdate"
+        android:layout_alignRight="@+id/editText_companyUpdate"
+        android:layout_alignEnd="@+id/editText_companyUpdate"
+        android:layout_toEndOf="@+id/textView23"
+        android:layout_alignLeft="@+id/editText_companyUpdate"
+        android:layout_alignStart="@+id/editText_companyUpdate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_pinUpdate"
+        android:layout_below="@+id/editText_numberUpdate"
+        android:layout_alignRight="@+id/editText_numberUpdate"
+        android:layout_alignEnd="@+id/editText_numberUpdate"
+        android:layout_toEndOf="@+id/textView23"
+        android:layout_alignLeft="@+id/editText_numberUpdate"
+        android:layout_alignStart="@+id/editText_numberUpdate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_expDateUpdate"
+        android:layout_below="@+id/editText_pinUpdate"
+        android:layout_alignRight="@+id/editText_pinUpdate"
+        android:layout_alignEnd="@+id/editText_pinUpdate"
+        android:layout_alignLeft="@+id/editText_pinUpdate"
+        android:layout_alignStart="@+id/editText_pinUpdate"
+        android:inputType="date" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_balanceUpdate"
+        android:layout_below="@+id/editText_expDateUpdate"
+        android:layout_alignRight="@+id/editText_expDateUpdate"
+        android:layout_alignEnd="@+id/editText_expDateUpdate"
+        android:layout_alignLeft="@+id/editText_expDateUpdate"
+        android:layout_alignStart="@+id/editText_expDateUpdate"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_noteUpdate"
+        android:layout_below="@+id/editText_balanceUpdate"
+        android:layout_alignRight="@+id/editText_balanceUpdate"
+        android:layout_alignEnd="@+id/editText_balanceUpdate"
+        android:layout_alignLeft="@+id/editText_balanceUpdate"
+        android:layout_alignStart="@+id/editText_balanceUpdate" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:id="@+id/button_SelectCard"
+        android:layout_alignBottom="@+id/editText_inputID"
+        android:layout_alignRight="@+id/textView28"
+        android:layout_alignEnd="@+id/textView28"
+        android:layout_toRightOf="@+id/editText_inputID"
+        android:layout_toEndOf="@+id/editText_inputID" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Card Company: "
+        android:id="@+id/textView22"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_alignBottom="@+id/editText_companyUpdate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Card Number: "
+        android:id="@+id/textView23"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/editText_pinUpdate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView22"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_toLeftOf="@+id/editText_companyUpdate"
+        android:layout_toStartOf="@+id/editText_companyUpdate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Card PIN: "
+        android:id="@+id/textView24"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/editText_expDateUpdate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView23"
+        android:layout_toLeftOf="@+id/editText_numberUpdate"
+        android:layout_toStartOf="@+id/editText_numberUpdate"
+        android:textSize="@dimen/abc_text_size_small_material" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Exp. Date: "
+        android:id="@+id/textView25"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/editText_balanceUpdate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView24"
+        android:layout_toLeftOf="@+id/editText_pinUpdate"
+        android:layout_toStartOf="@+id/editText_pinUpdate"
+        android:textSize="@dimen/abc_text_size_small_material" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Balance: "
+        android:id="@+id/textView26"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/editText_noteUpdate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/editText_balanceUpdate"
+        android:layout_toStartOf="@+id/editText_balanceUpdate"
+        android:layout_alignTop="@+id/editText_balanceUpdate"
+        android:textSize="@dimen/abc_text_size_small_material" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Notes:  "
+        android:id="@+id/textView27"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/editText_noteUpdate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/editText_noteUpdate"
+        android:layout_toStartOf="@+id/editText_noteUpdate"
+        android:layout_below="@+id/editText_balanceUpdate"
+        android:textSize="@dimen/abc_text_size_small_material" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Updates"
+        android:id="@+id/button_SubmitUpdates"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_marginTop="30dp"
+        android:layout_alignTop="@+id/editText_noteUpdate"
+        android:layout_toRightOf="@+id/textView27"
+        android:layout_toEndOf="@+id/textView27" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Step 1. Click the button above to look up the ID of the card you want to update. Enter the Card ID below, then click &quot;Select&quot;"
+        android:id="@+id/textView28"
+        android:layout_below="@+id/button_LookupCards"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Step 2. Update the card information below, then click &quot;Submit Updates&quot;"
+        android:id="@+id/textView20"
+        android:layout_below="@+id/editText_inputID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

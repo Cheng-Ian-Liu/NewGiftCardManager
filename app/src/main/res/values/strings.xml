@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewGiftCardManager</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_card">AddCardActivity</string>
+    <string name="title_activity_card_record">Gift Card Record</string>
+    <string name="title_activity_delete_cards">Delete Cards</string>
+    <string name="title_activity_update_cards">Update Cards</string>
+</resources>
